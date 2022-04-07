@@ -780,8 +780,9 @@ document.addEventListener('DOMContentLoaded', function () {
     var today = new Date();
     var month = today.getMonth();
     today = today.getDate();
-    var monthWordsArr = ['CASAS', 'MOTOS', 'PORTA', 'QUEDA', 'BUNDA', 'tampa', 'VIGOR', 'MEXER', 'IDEIA', 'CARNE', 'PRECO', 'HAVER', 'EXPOR', 'CENSO'];
-    return monthWordsArr[today - 1];
+    var monthWordsArr = ['CASAS', 'MOTOS', 'PORTA', 'QUEDA', 'BUNDA', 'TAMPA', 'VIGOR', 'MEXER', 'IDEIA', 'CARNE', 'PRECO', 'HAVER', 'EXPOR', 'CENSO', 'MANSO', 'PONTO', 'TARDE', 'FRUTA'];
+    var todayWord = monthWordsArr[today - 1].toString();
+    return todayWord.toLowerCase();
   }
 
   function throwError(type) {

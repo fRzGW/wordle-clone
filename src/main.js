@@ -156,13 +156,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
         let monthWordsArr = [
             'CASAS', 'MOTOS', 'PORTA',
-            'QUEDA', 'BUNDA', 'tampa',
+            'QUEDA', 'BUNDA', 'TAMPA',
             'VIGOR', 'MEXER', 'IDEIA',
             'CARNE', 'PRECO', 'HAVER', 
-            'EXPOR', 'CENSO' 
+            'EXPOR', 'CENSO', 'MANSO',
+            'PONTO', 'TARDE', 'FRUTA'
         ];
 
-        return monthWordsArr[today - 1];
+        let todayWord = monthWordsArr[today - 1].toString();
+
+        return todayWord.toLowerCase();
     }
 
     function throwError(type){
