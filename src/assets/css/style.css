@@ -89,7 +89,7 @@ header .ajuda{
     border: 2px solid rgb(58, 58, 60);
     min-width: 60px;
     min-height: 60px;
-    font-size: 50px;
+    font-size: 40px;
     font-weight: bold;
     color: gainsboro;
     text-transform: uppercase;
@@ -161,9 +161,7 @@ header .ajuda{
 }
 
 .dica{
-    width: 100%;
     height: 100vh;
-    background-color: black;
     justify-content: center;
     position: absolute;
     color: white;
@@ -172,6 +170,8 @@ header .ajuda{
 
 .dica-field{
     padding: 10px;
+    background-color: black;
+    background-size: cover;
 }
 
 .dica-title{
@@ -242,7 +242,7 @@ h4{
     .square{
         min-width: 50px;
         min-height: 50px;
-        font-size: 50px;
+        font-size: 30px;
     }
 
     #keyboard-container{
@@ -259,3 +259,15 @@ h4{
     }
 }
     
+@media (max-height: 774px){
+    .dica-title{
+        margin-top: 10px;
+        padding-bottom: 20px;
+        margin-bottom: 30px;
+        font-size: 30px;
+    }
+
+    .msg1{
+        font-size: 15px;
+    }
+}
