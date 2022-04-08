@@ -1,6 +1,37 @@
 /******/ (() => { // webpackBootstrap
-/******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
+
+/***/ "./src/modules/monthWords.js":
+/*!***********************************!*\
+  !*** ./src/modules/monthWords.js ***!
+  \***********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ getDayWord)
+/* harmony export */ });
+function getDayWord() {
+  var today = new Date();
+  today = today.getDate();
+  var monthWordsArr = ['CASAS', 'MOTOS', 'PORTA', 'QUEDA', 'BUNDA', 'TAMPA', 'VIGOR', 'MEXER', 'IDEIA', 'CARNE', 'PRECO', 'HAVER', 'EXPOR', 'CENSO', 'MANSO', 'PONTO', 'TARDE', 'FRUTA', 'EPICO', 'ESPIA', 'ERRAR', 'DOIDO'];
+  var todayWord = monthWordsArr[today - 1].toString();
+  return todayWord.toLowerCase();
+}
+;
+
+/***/ }),
+
+/***/ "./src/modules/victoryLoseError.js":
+/*!*****************************************!*\
+  !*** ./src/modules/victoryLoseError.js ***!
+  \*****************************************/
+/***/ (() => {
+
+
+
+/***/ }),
 
 /***/ "./src/modules/words.js":
 /*!******************************!*\
@@ -8,6 +39,7 @@
   \******************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
@@ -21,168 +53,9 @@ var words = ["AMORA", "AAIUN", "AARAO", "ABABA", "ABABE", "ABACA", "ABACE", "ABA
 /*!************************************************************************!*\
   !*** ./node_modules/css-loader/dist/cjs.js!./src/assets/css/style.css ***!
   \************************************************************************/
-/***/ ((module, __webpack_exports__, __webpack_require__) => {
+/***/ (() => {
 
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/sourceMaps.js */ "./node_modules/css-loader/dist/runtime/sourceMaps.js");
-/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
-/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
-// Imports
-
-
-var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
-___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.googleapis.com/css2?family=Fredoka:wght@300;500;700&display=swap);"]);
-// Module
-___CSS_LOADER_EXPORT___.push([module.id, "*{\r\n    margin: 0;\r\n    padding: 0;\r\n    box-sizing: border-box;\r\n}\r\n\r\nhtml, body{\r\n    height: 100%;\r\n    font-family: 'Fredoka', sans-serif;\r\n    font-weight: 300;\r\n}\r\n\r\n#container{\r\n    display: flex;\r\n    background-color: black;\r\n    height: 100%;\r\n    align-items: center;\r\n    flex-direction: column;\r\n}\r\n\r\n#game{\r\n    width: 100%;\r\n    max-width: 500px;\r\n    height: 100%;\r\n    display: flex;\r\n    flex-direction: column;\r\n}\r\n\r\nheader{\r\n    border-bottom: 1px solid rgb(58, 58, 60);\r\n}\r\n\r\nheader a{\r\n    background-color: white;\r\n    color: black;\r\n    padding: 2px;\r\n    width: 60px;\r\n    border-radius: 5px;  \r\n    font-style: normal;\r\n    font-weight: bold;\r\n    position: absolute;\r\n    display: flex;\r\n    top: 20px;\r\n    text-decoration: none;\r\n    font-style: normal;\r\n    font-size: 15px;\r\n    text-align: center;\r\n}\r\n\r\nheader i{\r\n    font-style: normal;\r\n}\r\n\r\nheader .git{\r\n    left: 10px;\r\n}\r\n\r\nheader .dicas{\r\n    right: 10px;\r\n}\r\n\r\n.title{\r\n    color: white;\r\n    font-size: 2.5rem;\r\n    font-weight: bold;\r\n    margin: 0.4rem 0 0.4rem 0;\r\n    text-align: center;\r\n}\r\n\r\n#board-container{\r\n    display: flex;\r\n    justify-content: center;\r\n    align-items: center;\r\n    flex-grow: 1;\r\n    overflow: hidden;\r\n}\r\n\r\n#board{\r\n    display: grid;\r\n    grid-template-columns: repeat(5, 1fr);\r\n    grid-gap: 5px;\r\n    padding: 10px;\r\n    box-sizing: border-box;\r\n}\r\n\r\n.square{\r\n    border: 2px solid rgb(58, 58, 60);\r\n    min-width: 60px;\r\n    min-height: 60px;\r\n    font-size: 50px;\r\n    font-weight: bold;\r\n    color: gainsboro;\r\n    text-transform: uppercase;\r\n    \r\n    display: flex;\r\n    justify-content: center;\r\n    align-items: center;\r\n\r\n}\r\n\r\n#keyboard-container{\r\n    height: 200px;\r\n}\r\n\r\n.keyboard-row{\r\n    display: flex;\r\n    justify-content: center;\r\n    width: 95%;\r\n    margin: 0 auto 8px;\r\n    touch-action: manipulation;\r\n}\r\n\r\n.keyboard-row button{\r\n    font-family: 'Fredoka', sans-serif;\r\n    font-weight: bold;\r\n    border: 0;\r\n    padding: 0;\r\n    height: 58px;\r\n    width: 48px;\r\n    cursor: pointer;\r\n    background-color: rgb(129, 131, 132);\r\n    color: white;\r\n    flex-grow: 1;\r\n    text-transform: uppercase;\r\n    margin-right: 3px;\r\n    margin-left: 3px;\r\n    border-radius: 4px;\r\n    user-select: none;\r\n}\r\n\r\n.keyboard-row button.wide-button{\r\n    flex-grow: 1.5;\r\n}\r\n\r\n.spacer-half{\r\n    flex-grow: 0.5;\r\n}\r\n\r\n.erro-msg{\r\n    position: absolute;\r\n    display: flex;\r\n    justify-content: center;\r\n    margin-top: 40px;    \r\n    left: 50%;\r\n    transform: translate(-50%);\r\n    color: rgb(255, 148, 86);\r\n    text-align: center;\r\n    text-transform: uppercase;\r\n}\r\n\r\n.hidden{\r\n    display: none;\r\n    visibility: none;\r\n}\r\n\r\n@media (max-height: 820px){\r\n    .title{\r\n        font-size: 1.5em;\r\n    }\r\n    .square{\r\n        min-width: 50px;\r\n        min-height: 50px;\r\n        font-size: 50px;\r\n    }\r\n\r\n    #keyboard-container{\r\n        height: 170px;\r\n    }\r\n\r\n    .keyboard-row button{\r\n        height: 48px;\r\n        width: 30px;\r\n    }\r\n\r\n    header a{\r\n        top: 8px;\r\n    }\r\n}\r\n    \r\n", "",{"version":3,"sources":["webpack://./src/assets/css/style.css"],"names":[],"mappings":"AAEA;IACI,SAAS;IACT,UAAU;IACV,sBAAsB;AAC1B;;AAEA;IACI,YAAY;IACZ,kCAAkC;IAClC,gBAAgB;AACpB;;AAEA;IACI,aAAa;IACb,uBAAuB;IACvB,YAAY;IACZ,mBAAmB;IACnB,sBAAsB;AAC1B;;AAEA;IACI,WAAW;IACX,gBAAgB;IAChB,YAAY;IACZ,aAAa;IACb,sBAAsB;AAC1B;;AAEA;IACI,wCAAwC;AAC5C;;AAEA;IACI,uBAAuB;IACvB,YAAY;IACZ,YAAY;IACZ,WAAW;IACX,kBAAkB;IAClB,kBAAkB;IAClB,iBAAiB;IACjB,kBAAkB;IAClB,aAAa;IACb,SAAS;IACT,qBAAqB;IACrB,kBAAkB;IAClB,eAAe;IACf,kBAAkB;AACtB;;AAEA;IACI,kBAAkB;AACtB;;AAEA;IACI,UAAU;AACd;;AAEA;IACI,WAAW;AACf;;AAEA;IACI,YAAY;IACZ,iBAAiB;IACjB,iBAAiB;IACjB,yBAAyB;IACzB,kBAAkB;AACtB;;AAEA;IACI,aAAa;IACb,uBAAuB;IACvB,mBAAmB;IACnB,YAAY;IACZ,gBAAgB;AACpB;;AAEA;IACI,aAAa;IACb,qCAAqC;IACrC,aAAa;IACb,aAAa;IACb,sBAAsB;AAC1B;;AAEA;IACI,iCAAiC;IACjC,eAAe;IACf,gBAAgB;IAChB,eAAe;IACf,iBAAiB;IACjB,gBAAgB;IAChB,yBAAyB;;IAEzB,aAAa;IACb,uBAAuB;IACvB,mBAAmB;;AAEvB;;AAEA;IACI,aAAa;AACjB;;AAEA;IACI,aAAa;IACb,uBAAuB;IACvB,UAAU;IACV,kBAAkB;IAClB,0BAA0B;AAC9B;;AAEA;IACI,kCAAkC;IAClC,iBAAiB;IACjB,SAAS;IACT,UAAU;IACV,YAAY;IACZ,WAAW;IACX,eAAe;IACf,oCAAoC;IACpC,YAAY;IACZ,YAAY;IACZ,yBAAyB;IACzB,iBAAiB;IACjB,gBAAgB;IAChB,kBAAkB;IAClB,iBAAiB;AACrB;;AAEA;IACI,cAAc;AAClB;;AAEA;IACI,cAAc;AAClB;;AAEA;IACI,kBAAkB;IAClB,aAAa;IACb,uBAAuB;IACvB,gBAAgB;IAChB,SAAS;IACT,0BAA0B;IAC1B,wBAAwB;IACxB,kBAAkB;IAClB,yBAAyB;AAC7B;;AAEA;IACI,aAAa;IACb,gBAAgB;AACpB;;AAEA;IACI;QACI,gBAAgB;IACpB;IACA;QACI,eAAe;QACf,gBAAgB;QAChB,eAAe;IACnB;;IAEA;QACI,aAAa;IACjB;;IAEA;QACI,YAAY;QACZ,WAAW;IACf;;IAEA;QACI,QAAQ;IACZ;AACJ","sourcesContent":["@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300;500;700&display=swap');\r\n\r\n*{\r\n    margin: 0;\r\n    padding: 0;\r\n    box-sizing: border-box;\r\n}\r\n\r\nhtml, body{\r\n    height: 100%;\r\n    font-family: 'Fredoka', sans-serif;\r\n    font-weight: 300;\r\n}\r\n\r\n#container{\r\n    display: flex;\r\n    background-color: black;\r\n    height: 100%;\r\n    align-items: center;\r\n    flex-direction: column;\r\n}\r\n\r\n#game{\r\n    width: 100%;\r\n    max-width: 500px;\r\n    height: 100%;\r\n    display: flex;\r\n    flex-direction: column;\r\n}\r\n\r\nheader{\r\n    border-bottom: 1px solid rgb(58, 58, 60);\r\n}\r\n\r\nheader a{\r\n    background-color: white;\r\n    color: black;\r\n    padding: 2px;\r\n    width: 60px;\r\n    border-radius: 5px;  \r\n    font-style: normal;\r\n    font-weight: bold;\r\n    position: absolute;\r\n    display: flex;\r\n    top: 20px;\r\n    text-decoration: none;\r\n    font-style: normal;\r\n    font-size: 15px;\r\n    text-align: center;\r\n}\r\n\r\nheader i{\r\n    font-style: normal;\r\n}\r\n\r\nheader .git{\r\n    left: 10px;\r\n}\r\n\r\nheader .dicas{\r\n    right: 10px;\r\n}\r\n\r\n.title{\r\n    color: white;\r\n    font-size: 2.5rem;\r\n    font-weight: bold;\r\n    margin: 0.4rem 0 0.4rem 0;\r\n    text-align: center;\r\n}\r\n\r\n#board-container{\r\n    display: flex;\r\n    justify-content: center;\r\n    align-items: center;\r\n    flex-grow: 1;\r\n    overflow: hidden;\r\n}\r\n\r\n#board{\r\n    display: grid;\r\n    grid-template-columns: repeat(5, 1fr);\r\n    grid-gap: 5px;\r\n    padding: 10px;\r\n    box-sizing: border-box;\r\n}\r\n\r\n.square{\r\n    border: 2px solid rgb(58, 58, 60);\r\n    min-width: 60px;\r\n    min-height: 60px;\r\n    font-size: 50px;\r\n    font-weight: bold;\r\n    color: gainsboro;\r\n    text-transform: uppercase;\r\n    \r\n    display: flex;\r\n    justify-content: center;\r\n    align-items: center;\r\n\r\n}\r\n\r\n#keyboard-container{\r\n    height: 200px;\r\n}\r\n\r\n.keyboard-row{\r\n    display: flex;\r\n    justify-content: center;\r\n    width: 95%;\r\n    margin: 0 auto 8px;\r\n    touch-action: manipulation;\r\n}\r\n\r\n.keyboard-row button{\r\n    font-family: 'Fredoka', sans-serif;\r\n    font-weight: bold;\r\n    border: 0;\r\n    padding: 0;\r\n    height: 58px;\r\n    width: 48px;\r\n    cursor: pointer;\r\n    background-color: rgb(129, 131, 132);\r\n    color: white;\r\n    flex-grow: 1;\r\n    text-transform: uppercase;\r\n    margin-right: 3px;\r\n    margin-left: 3px;\r\n    border-radius: 4px;\r\n    user-select: none;\r\n}\r\n\r\n.keyboard-row button.wide-button{\r\n    flex-grow: 1.5;\r\n}\r\n\r\n.spacer-half{\r\n    flex-grow: 0.5;\r\n}\r\n\r\n.erro-msg{\r\n    position: absolute;\r\n    display: flex;\r\n    justify-content: center;\r\n    margin-top: 40px;    \r\n    left: 50%;\r\n    transform: translate(-50%);\r\n    color: rgb(255, 148, 86);\r\n    text-align: center;\r\n    text-transform: uppercase;\r\n}\r\n\r\n.hidden{\r\n    display: none;\r\n    visibility: none;\r\n}\r\n\r\n@media (max-height: 820px){\r\n    .title{\r\n        font-size: 1.5em;\r\n    }\r\n    .square{\r\n        min-width: 50px;\r\n        min-height: 50px;\r\n        font-size: 50px;\r\n    }\r\n\r\n    #keyboard-container{\r\n        height: 170px;\r\n    }\r\n\r\n    .keyboard-row button{\r\n        height: 48px;\r\n        width: 30px;\r\n    }\r\n\r\n    header a{\r\n        top: 8px;\r\n    }\r\n}\r\n    \r\n"],"sourceRoot":""}]);
-// Exports
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
-
-
-/***/ }),
-
-/***/ "./node_modules/css-loader/dist/runtime/api.js":
-/*!*****************************************************!*\
-  !*** ./node_modules/css-loader/dist/runtime/api.js ***!
-  \*****************************************************/
-/***/ ((module) => {
-
-
-
-/*
-  MIT License http://www.opensource.org/licenses/mit-license.php
-  Author Tobias Koppers @sokra
-*/
-module.exports = function (cssWithMappingToString) {
-  var list = []; // return the list of modules as css string
-
-  list.toString = function toString() {
-    return this.map(function (item) {
-      var content = "";
-      var needLayer = typeof item[5] !== "undefined";
-
-      if (item[4]) {
-        content += "@supports (".concat(item[4], ") {");
-      }
-
-      if (item[2]) {
-        content += "@media ".concat(item[2], " {");
-      }
-
-      if (needLayer) {
-        content += "@layer".concat(item[5].length > 0 ? " ".concat(item[5]) : "", " {");
-      }
-
-      content += cssWithMappingToString(item);
-
-      if (needLayer) {
-        content += "}";
-      }
-
-      if (item[2]) {
-        content += "}";
-      }
-
-      if (item[4]) {
-        content += "}";
-      }
-
-      return content;
-    }).join("");
-  }; // import a list of modules into the list
-
-
-  list.i = function i(modules, media, dedupe, supports, layer) {
-    if (typeof modules === "string") {
-      modules = [[null, modules, undefined]];
-    }
-
-    var alreadyImportedModules = {};
-
-    if (dedupe) {
-      for (var k = 0; k < this.length; k++) {
-        var id = this[k][0];
-
-        if (id != null) {
-          alreadyImportedModules[id] = true;
-        }
-      }
-    }
-
-    for (var _k = 0; _k < modules.length; _k++) {
-      var item = [].concat(modules[_k]);
-
-      if (dedupe && alreadyImportedModules[item[0]]) {
-        continue;
-      }
-
-      if (typeof layer !== "undefined") {
-        if (typeof item[5] === "undefined") {
-          item[5] = layer;
-        } else {
-          item[1] = "@layer".concat(item[5].length > 0 ? " ".concat(item[5]) : "", " {").concat(item[1], "}");
-          item[5] = layer;
-        }
-      }
-
-      if (media) {
-        if (!item[2]) {
-          item[2] = media;
-        } else {
-          item[1] = "@media ".concat(item[2], " {").concat(item[1], "}");
-          item[2] = media;
-        }
-      }
-
-      if (supports) {
-        if (!item[4]) {
-          item[4] = "".concat(supports);
-        } else {
-          item[1] = "@supports (".concat(item[4], ") {").concat(item[1], "}");
-          item[4] = supports;
-        }
-      }
-
-      list.push(item);
-    }
-  };
-
-  return list;
-};
-
-/***/ }),
-
-/***/ "./node_modules/css-loader/dist/runtime/sourceMaps.js":
-/*!************************************************************!*\
-  !*** ./node_modules/css-loader/dist/runtime/sourceMaps.js ***!
-  \************************************************************/
-/***/ ((module) => {
-
-
-
-module.exports = function (item) {
-  var content = item[1];
-  var cssMapping = item[3];
-
-  if (!cssMapping) {
-    return content;
-  }
-
-  if (typeof btoa === "function") {
-    var base64 = btoa(unescape(encodeURIComponent(JSON.stringify(cssMapping))));
-    var data = "sourceMappingURL=data:application/json;charset=utf-8;base64,".concat(base64);
-    var sourceMapping = "/*# ".concat(data, " */");
-    var sourceURLs = cssMapping.sources.map(function (source) {
-      return "/*# sourceURL=".concat(cssMapping.sourceRoot || "").concat(source, " */");
-    });
-    return [content].concat(sourceURLs).concat([sourceMapping]).join("\n");
-  }
-
-  return [content].join("\n");
-};
+throw new Error("Module build failed (from ./node_modules/css-loader/dist/cjs.js):\nCssSyntaxError\n\n(176:5) C:\\Users\\joaov\\Projetos\\wordle-clone\\src\\assets\\css\\style.css Unknown word\n\n \u001b[90m 174 | \u001b[39m    margin-top\u001b[33m:\u001b[39m 20px\u001b[33m;\u001b[39m\n \u001b[90m 175 | \u001b[39m    pad\n\u001b[1m\u001b[31m>\u001b[39m\u001b[22m\u001b[90m 176 | \u001b[39m    font-size\u001b[33m:\u001b[39m 40px\u001b[33m;\u001b[39m\n \u001b[90m     | \u001b[39m    \u001b[1m\u001b[31m^\u001b[39m\u001b[22m\n \u001b[90m 177 | \u001b[39m    display\u001b[33m:\u001b[39m flex\u001b[33m;\u001b[39m\n \u001b[90m 178 | \u001b[39m    top\u001b[33m:\u001b[39m 50px\u001b[33m;\u001b[39m\n");
 
 /***/ }),
 
@@ -192,6 +65,7 @@ module.exports = function (item) {
   \**********************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
@@ -246,6 +120,7 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
   \****************************************************************************/
 /***/ ((module) => {
 
+"use strict";
 
 
 var stylesInDOM = [];
@@ -359,6 +234,7 @@ module.exports = function (list, options) {
   \********************************************************************/
 /***/ ((module) => {
 
+"use strict";
 
 
 var memo = {};
@@ -407,6 +283,7 @@ module.exports = insertBySelector;
   \**********************************************************************/
 /***/ ((module) => {
 
+"use strict";
 
 
 /* istanbul ignore next  */
@@ -427,6 +304,7 @@ module.exports = insertStyleElement;
   \**********************************************************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
+"use strict";
 
 
 /* istanbul ignore next  */
@@ -448,6 +326,7 @@ module.exports = setAttributesWithoutAttributes;
   \***************************************************************/
 /***/ ((module) => {
 
+"use strict";
 
 
 /* istanbul ignore next  */
@@ -527,6 +406,7 @@ module.exports = domAPI;
   \*********************************************************************/
 /***/ ((module) => {
 
+"use strict";
 
 
 /* istanbul ignore next  */
@@ -560,7 +440,7 @@ module.exports = styleTagTransform;
 /******/ 		}
 /******/ 		// Create a new module (and put it into the cache)
 /******/ 		var module = __webpack_module_cache__[moduleId] = {
-/******/ 			id: moduleId,
+/******/ 			// no module.id needed
 /******/ 			// no module.loaded needed
 /******/ 			exports: {}
 /******/ 		};
@@ -615,14 +495,18 @@ module.exports = styleTagTransform;
 /******/ 	
 /************************************************************************/
 var __webpack_exports__ = {};
-// This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
+// This entry need to be wrapped in an IIFE because it need to be in strict mode.
 (() => {
+"use strict";
 /*!*********************!*\
   !*** ./src/main.js ***!
   \*********************/
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _assets_css_style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./assets/css/style.css */ "./src/assets/css/style.css");
 /* harmony import */ var _modules_words__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/words */ "./src/modules/words.js");
+/* harmony import */ var _modules_monthWords__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/monthWords */ "./src/modules/monthWords.js");
+/* harmony import */ var _modules_victoryLoseError__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/victoryLoseError */ "./src/modules/victoryLoseError.js");
+/* harmony import */ var _modules_victoryLoseError__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_modules_victoryLoseError__WEBPACK_IMPORTED_MODULE_3__);
 function _createForOfIteratorHelper(o, allowArrayLike) { var it = typeof Symbol !== "undefined" && o[Symbol.iterator] || o["@@iterator"]; if (!it) { if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = it.call(o); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it["return"] != null) it["return"](); } finally { if (didErr) throw err; } } }; }
 
 function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
@@ -631,14 +515,16 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 
 
 
+
+
 document.addEventListener('DOMContentLoaded', function () {
   createSquares();
   var guessedWords = [[]];
   var availableSpace = 1;
-  var word = getDayWord();
+  var word = (0,_modules_monthWords__WEBPACK_IMPORTED_MODULE_2__["default"])();
   console.log('A PALAVRA ATUAL É: ' + word);
+  var keyboardContainer = document.querySelector('#keyboard-container');
   var guessWordCount = 0;
-  var msg = document.querySelector('.erro-msg');
   var keys = document.querySelectorAll('.keyboard-row button');
 
   function getCurrentWordArr() {
@@ -704,7 +590,7 @@ document.addEventListener('DOMContentLoaded', function () {
       }
 
       if (guessedWords.length === 6) {
-        throwError(1);
+        lose();
         return;
       }
 
@@ -734,6 +620,7 @@ document.addEventListener('DOMContentLoaded', function () {
     var lastLetterEl = document.getElementById(String(availableSpace - 1));
     lastLetterEl.textContent = '';
     availableSpace = availableSpace - 1;
+    console.log(availableSpace);
   }
 
   for (var i = 0; i < keys.length; i++) {
@@ -776,17 +663,14 @@ document.addEventListener('DOMContentLoaded', function () {
     return false;
   }
 
-  function getDayWord() {
-    var today = new Date();
-    var month = today.getMonth();
-    today = today.getDate();
-    var monthWordsArr = ['CASAS', 'MOTOS', 'PORTA', 'QUEDA', 'BUNDA', 'TAMPA', 'VIGOR', 'MEXER', 'IDEIA', 'CARNE', 'PRECO', 'HAVER', 'EXPOR', 'CENSO', 'MANSO', 'PONTO', 'TARDE', 'FRUTA'];
-    var todayWord = monthWordsArr[today - 1].toString();
-    return todayWord.toLowerCase();
+  var msg = document.querySelector('.msg');
+
+  function lose() {
+    msg.innerText = 'VOCÊ PERDEU! A PALAVRA ERA: ' + word;
+    keyboardContainer.style.cssText = "display: none; visibility: hidden";
   }
 
   function throwError(type) {
-    if (type == 1) msg.innerText = 'VOCÊ PERDEU!';
     if (type == 2) msg.innerText = 'ESSA PALAVRA NÃO FOI ENCONTRADA!';
     if (type == 3) msg.innerText = 'VOCE PRECISA COLOCAR 5 LETRAS';
     setTimeout(function () {
@@ -796,8 +680,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   function victory() {
     msg.style.cssText = "color: green;";
-    msg.innerText = 'VOCÊ GANHOU';
-    var keyboardContainer = document.querySelector('#keyboard-container');
+    msg.innerText = 'VOCÊ GANHOU!';
     keyboardContainer.style.cssText = "display: none; visibility: hidden";
   }
 });

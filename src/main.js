@@ -1,5 +1,7 @@
 import './assets/css/style.css';
 import words from './modules/words';
+import getDayWord from './modules/monthWords';
+import {msg, throwError, victory} from './modules/victoryLoseError';
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -11,9 +13,9 @@ document.addEventListener('DOMContentLoaded', () => {
     
     let word = getDayWord();
     console.log('A PALAVRA ATUAL É: ' + word);
+    var keyboardContainer = document.querySelector('#keyboard-container');
     let guessWordCount = 0;
 
-    const msg = document.querySelector('.erro-msg');
     const keys = document.querySelectorAll('.keyboard-row button');
 
     function getCurrentWordArr(){
@@ -87,7 +89,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             if (guessedWords.length === 6){
-                throwError(1);
+                lose();
                 return;
             }
 
@@ -121,6 +123,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const lastLetterEl = document.getElementById(String(availableSpace - 1));
         lastLetterEl.textContent = '';
         availableSpace = availableSpace -1;
+        console.log(availableSpace);
     }
 
     for (let i = 0; i < keys.length; i++) {
@@ -149,30 +152,17 @@ document.addEventListener('DOMContentLoaded', () => {
         return false;
     }
 
-    function getDayWord(){
-        let today = new Date();
-        let month = today.getMonth();
-        today = today.getDate();
+    const msg = document.querySelector('.msg');
 
-        let monthWordsArr = [
-            'CASAS', 'MOTOS', 'PORTA',
-            'QUEDA', 'BUNDA', 'TAMPA',
-            'VIGOR', 'MEXER', 'IDEIA',
-            'CARNE', 'PRECO', 'HAVER', 
-            'EXPOR', 'CENSO', 'MANSO',
-            'PONTO', 'TARDE', 'FRUTA'
-        ];
-
-        let todayWord = monthWordsArr[today - 1].toString();
-
-        return todayWord.toLowerCase();
+    function lose(){
+        msg.innerText = 'VOCÊ PERDEU! A PALAVRA ERA: ' + word;
+        keyboardContainer.style.cssText = "display: none; visibility: hidden";
     }
 
     function throwError(type){
-        if(type == 1) msg.innerText = 'VOCÊ PERDEU!';
         if(type == 2) msg.innerText = 'ESSA PALAVRA NÃO FOI ENCONTRADA!';
         if(type == 3) msg.innerText = 'VOCE PRECISA COLOCAR 5 LETRAS';
-            
+                
         setTimeout(() => {
             msg.innerText = '';
         }, 3000);
@@ -180,11 +170,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function victory(){
         msg.style.cssText = "color: green;"
-        msg.innerText = 'VOCÊ GANHOU';
+        msg.innerText = 'VOCÊ GANHOU!';
 
-        let keyboardContainer = document.querySelector('#keyboard-container');
         keyboardContainer.style.cssText = "display: none; visibility: hidden";
-
     }
+
 
 });
