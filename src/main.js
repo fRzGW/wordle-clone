@@ -1,10 +1,22 @@
 import './assets/css/style.css';
 import words from './modules/words';
 import getDayWord from './modules/monthWords';
-import {msg, throwError, victory} from './modules/victoryLoseError';
 
 
 document.addEventListener('DOMContentLoaded', () => {
+    let helpContainer = document.querySelector('.dica');
+    let gameContainer = document.querySelector('#game');
+    let helpContainerButton = document.querySelector('.close-help');
+
+    let helpBtn = document.querySelector('.ajuda');
+    helpBtn.addEventListener('click', () => {
+        gameContainer.style.cssText = 'visibility: hidden; display: none;';
+        helpContainer.style.cssText = 'visibility: visible; display: block';
+    });
+    helpContainerButton.addEventListener('click', () => {
+        gameContainer.style.cssText = 'visibility: visible; display: flex';
+        helpContainer.style.cssText = 'visibility: hidden; display: none';
+    });
 
     createSquares();
 
