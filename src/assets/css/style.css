@@ -112,6 +112,8 @@ header .ajuda{
     touch-action: manipulation;
 }
 
+
+
 .keyboard-row button{
     font-family: 'Fredoka', sans-serif;
     font-weight: bold;
@@ -128,6 +130,14 @@ header .ajuda{
     margin-left: 3px;
     border-radius: 4px;
     user-select: none;
+}
+
+.keyboard-row .enter{
+    background-color: rgb(73, 139, 73);
+}
+
+.keyboard-row .del{
+    background-color: rgb(163, 73, 73);
 }
 
 .keyboard-row button.wide-button{
@@ -230,6 +240,7 @@ header .ajuda{
 h4{
     margin-top: 40px;
 }
+
 
 
 

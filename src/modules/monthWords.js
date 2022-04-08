@@ -10,10 +10,16 @@ export default function getDayWord(){
         'EXPOR', 'CENSO', 'MANSO',
         'PONTO', 'TARDE', 'FRUTA',
         'EPICO', 'ESPIA', 'ERRAR',
-        'DOIDO'
+        'DOIDO', 'LIMPO', 'MEIAS',
+        'CARRO', 'NOTAR', 'ERRAR'
     ];
 
     let todayWord = monthWordsArr[today - 1].toString();
+
+    if(todayWord.length < 5 || todayWord.length > 5){
+        console.error('A palavra do dia não esta correta');
+        return;
+    }
 
     return todayWord.toLowerCase();
 };
